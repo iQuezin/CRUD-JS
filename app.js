@@ -25,4 +25,8 @@ document.getElementById('btnAddJogo').addEventListener('click', function () {
         localStorage.setItem('jogos', JSON.stringify(jogos)); //Adicionando ao local storage
     }
 
+    function carregarJogos() { // Carregar os jogos do local storage
+        const jogos = JSON.parse(localStorage.getItem('jogos') || []); //getItem pega item por item
+    }
+
 });
